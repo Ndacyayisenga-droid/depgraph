@@ -77,9 +77,11 @@ export default function LandingPage() {
       <footer className="border-t bg-card">
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-2 px-4 py-6 text-xs text-muted-foreground md:px-8">
           <span>{messages.app.tagline.join(" ")}</span>
+          {/* Hidden for now; the page is still reachable at /design-system.
           <Link href="/design-system" className="hover:text-primary">
             {messages.nav.designSystem}
           </Link>
+          */}
         </div>
       </footer>
     </div>
