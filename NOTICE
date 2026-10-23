@@ -1,0 +1,11 @@
+DepGraph
+Copyright 2026 Open Elements GmbH
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Bundled third-party assets:
+
+- Lato and Montserrat fonts (src/fonts), licensed under the SIL Open Font
+  License 1.1; see src/fonts/OFL-Lato.txt and src/fonts/OFL-Montserrat.txt.
+- Open Elements logos (public/brand) are trademarks of Open Elements GmbH and
+  are not licensed under the Apache License.

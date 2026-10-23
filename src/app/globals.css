@@ -1,26 +1,137 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-sans: var(--font-lato);
+  --font-heading: var(--font-montserrat);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-primary-50: #f0f6ff;
+  --color-primary-100: #ddebff;
+  --color-primary-200: #b8d5ff;
+  --color-primary-300: #7da9ff;
+  --color-primary-400: #6ca8ff;
+
+  --color-navy: var(--navy);
+  --color-heading: var(--heading);
+
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --color-teal: var(--teal);
+  --color-neutral: var(--neutral);
+  --color-neutral-soft: var(--neutral-soft);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-muted: var(--sidebar-muted);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-grid: var(--chart-grid);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+  --radius-2xl: calc(var(--radius) * 2);
+  --radius-3xl: calc(var(--radius) * 3);
+  --radius-4xl: calc(var(--radius) * 4);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 0.5rem;
+
+  --navy: #062746;
+  --heading: #142d4f;
+
+  --background: #f3f7fc;
+  --foreground: #142d4f;
+  --card: #ffffff;
+  --card-foreground: #142d4f;
+  --popover: #ffffff;
+  --popover-foreground: #142d4f;
+  --primary: #126bfa;
+  --primary-foreground: #ffffff;
+  --secondary: #eaf2ff;
+  --secondary-foreground: #062746;
+  --muted: #f6f9fd;
+  --muted-foreground: #6d8098;
+  --accent: #eaf1fa;
+  --accent-foreground: #062746;
+  --destructive: #f05252;
+  --border: #dce6f2;
+  --input: #dce6f2;
+  --ring: #126bfa;
+
+  --success: #11b894;
+  --success-soft: #e2f7ef;
+  --warning: #f59e0b;
+  --warning-soft: #fff4d8;
+  --danger: #f05252;
+  --danger-soft: #ffe7e7;
+  --info: #126bfa;
+  --info-soft: #e7f0ff;
+  --teal: #10b7a6;
+  --neutral: #6d8098;
+  --neutral-soft: #edf2f8;
+
+  --sidebar: #062746;
+  --sidebar-foreground: #b8cbe0;
+  --sidebar-muted: #c4d5e7;
+  --sidebar-accent: #104d88;
+  --sidebar-accent-foreground: #ffffff;
+
+  --chart-1: #f05252;
+  --chart-2: #126bfa;
+  --chart-3: #11b894;
+  --chart-grid: #e8eef6;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  html {
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading text-heading;
+  }
 }
