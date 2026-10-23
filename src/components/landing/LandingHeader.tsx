@@ -8,7 +8,7 @@ const m = messages.landing;
 
 export function LandingHeader() {
   return (
-    <header className="border-b bg-card">
+    <header className="sticky top-0 z-30 border-b bg-card/95 backdrop-blur">
       <div className="mx-auto flex h-[72px] max-w-screen-xl items-center gap-6 px-4 md:px-8">
         <Link href="/" aria-label={messages.app.title}>
           <Logo surface="light" />
